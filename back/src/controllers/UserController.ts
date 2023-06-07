@@ -97,9 +97,9 @@ class UserController {
           res.json(obj);
           mailer.sendMail(
             {
-              from: "radev69@bk.ru",
+              from: "admin@bk.ru",
               to: postData.email,
-              subject: "Подтверждение почты React Chat Tutorial",
+              subject: "Подтверждение почты Chat",
               html: `Для того, чтобы подтвердить почту, перейдите <a href="http://localhost:3000/signup/verify?hash=${obj.confirm_hash}">по этой ссылке</a>`,
             },
             function (err: Error | null, info: SentMessageInfo) {
